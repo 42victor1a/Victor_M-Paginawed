@@ -34,25 +34,26 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
+}
+
+section {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap; /* Permite que os cards pulem de linha em telas menores */
+    justify-content: center;
 }
 
 .cartao {
     width: 260px;
-    height: 200px;
-}
-
-.cartao-imagem {
-    width: 100%;
-}
-
-footer {
-    background-color: #333333; /* Cor escura para destacar o texto */
-    padding: 15px 25px;
-    color: aliceblue;
+    height: 240px;
+    perspective: 1000px; /* Ativa o efeito 3D */
 }
 
 .cartao-interno {
     position: relative;
+    width: 100%;
+    height: 100%;
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
@@ -61,18 +62,33 @@ footer {
     transform: rotateY(180deg);
 }
 
-.catao-frente, .cartao-verso {
+.cartao-frente, .cartao-verso {
     position: absolute;
+    width: 100%;
+    height: 100%;
     border-radius: 12px;
-    box-shadow: 0px, 6px, 12px rgb(0, 0, 0, 0.15);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Corrigido sem vírgulas */
     backface-visibility: hidden;
+    background-color: #ffffff;
+    padding: 12px;
+    text-align: center;
 }
 
 .cartao-verso {
     transform: rotateY(180deg);
 }
 
-section {
-    display: flex;
-    gap: 16px;
+.cartao-imagem {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+footer {
+    background-color: #333333;
+    padding: 15px 25px;
+    color: aliceblue;
+    text-align: center;
 }
