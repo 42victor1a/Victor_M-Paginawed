@@ -47,3 +47,11 @@ footer {
     padding: 15px 25px;
     color: aliceblue;
 }
+
+.cartao-interno {
+    position: relative;
+}
+
+.catao-frente, .cartao-verso {
+    position: absolute;
+}
