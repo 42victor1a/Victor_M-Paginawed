@@ -1,6 +1,14 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: bisque;
 }
 
 .cabecalho {
@@ -9,26 +17,6 @@
     justify-content: space-between;
     align-items: center;
     background-color: rgb(0, 0, 0);
-}
-
-.cartao {
-    width: 260px;
-    height: 200px;
-}
-
-.cartao-imagem {
-    width: 100%;
-}
-
-boby {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: bisque;
-}
-
-main {
-    flex: 1;
 }
 
 .cabecalho-link {
@@ -41,8 +29,21 @@ h1 {
     font-size: 24px;
 }
 
+main {
+    flex: 1;
+}
+
+.cartao {
+    width: 260px;
+    height: 200px;
+}
+
+.cartao-imagem {
+    width: 100%;
+}
+
 footer {
-    background-color: aliceblue;
+    background-color: #333333; /* Cor escura para destacar o texto */
     padding: 15px 25px;
     color: aliceblue;
 }
