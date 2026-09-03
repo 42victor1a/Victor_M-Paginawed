@@ -1,3 +1,11 @@
+Há dois pequenos erros de marcação na seção principal (`<main>`):
+
+* **Caractere extra:** Ficou um colchete `]` sobrando logo após a fechamento do `</h2>`.
+* **Tag duplicada:** A tag `</article>` está sobrando no final, pois o artigo já havia sido fechado antes de `</section>`.
+
+**Código corrigido:**
+
+```html
 <!DOCTYPE html> 
 <html lang="pt-br"> 
   <head> 
@@ -14,23 +22,21 @@
         </nav>   
     </header>
     <main>
-      <h2>Descubra a verdade passando o mouse</h2>]
+      <h2>Descubra a verdade passando o mouse</h2>
       <section>
-      <article class="cartao">
-        <div class="cartao-interno">
-          <div class="cartao-frente">
-            <img src="https://super.abril.com.br/wp-content/uploads/2018/07/52d0469d865be2752d0003a9emperor-cold_hg.jpeg" alt="Pinguim" class="cartao-imagem">
-            <p>Pinguins conseguem voar como pássaros</p>
+        <article class="cartao">
+          <div class="cartao-interno">
+            <div class="cartao-frente">
+              <img src="https://super.abril.com.br/wp-content/uploads/2018/07/52d0469d865be2752d0003a9emperor-cold_hg.jpeg" alt="Pinguim" class="cartao-imagem">
+              <p>Pinguins conseguem voar como pássaros</p>
+            </div>
+            <div class="cartao-verso">
+              <img src="https://super.abril.com.br/wp-content/uploads/2018/07/52d0469d865be2752d0003a9emperor-cold_hg.jpeg" alt="Pinguim" class="cartao-imagem">
+              <p>Pinguins não voam, mas são excelentes nadadores</p>
+            </div>
           </div>
-          <div class="cartao-verso">
-            <img src="https://super.abril.com.br/wp-content/uploads/2018/07/52d0469d865be2752d0003a9emperor-cold_hg.jpeg" alt="Pinguim" class="cartao-imagem">
-            <p>Pinguins não voam, mas são excelentes nadadores</p>
-          </div>
-        </div>
-      </article>
-      
+        </article>
       </section>
-      </article>
     </main>
     <footer>
       <p>Projeto feito por Victor Mariano</p>
